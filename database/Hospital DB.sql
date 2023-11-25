@@ -17,6 +17,7 @@ CREATE TABLE `pacientes` (
   `apellidos` varchar(100),
   `fecha_nacimiento` date,
   `telefono` varchar(50)
+  'Correo' varchar(50)
 );
 
 CREATE TABLE `cita_medica` (

@@ -72,8 +72,9 @@ router.post('/agregar-paciente', (req, res) => {
   const cedula = req.body.cedula
   const fecha_nacimiento =req.body.fecha_nacimiento
   const telefono = req.body.telefono
+  const correo = req.body.correo
   
-  conexion.query(`INSERT INTO pacientes (cedula, nombres, apellidos, fecha_nacimiento, telefono) VALUES (${cedula}, '${nombres}', '${apellidos}', '${fecha_nacimiento}', '${telefono}')`, (error, resultado) => {
+  conexion.query(`INSERT INTO pacientes (cedula, nombres, apellidos, fecha_nacimiento, telefono, correo) VALUES (${cedula}, '${nombres}', '${apellidos}', '${fecha_nacimiento}', '${telefono}','${correo}')`, (error, resultado) => {
     if (error) {
       console.log(error)
       res.status(500).send('Ocurrio un error en la consulta')
